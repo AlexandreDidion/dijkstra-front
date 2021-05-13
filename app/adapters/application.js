@@ -4,6 +4,6 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
   host = 'http://dijkstralex.herokuapp.com/'
   namespace = 'api/v1';
   headers = {
-    'Authorization': 'Basic YWxleDpkaWprc3RyYWJyYWNhZGFicmE='
+    'Authorization': ENV[BASIC_SECRET]
   };
 }
