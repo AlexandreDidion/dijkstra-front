@@ -1,0 +1,12 @@
+{{page-title "Countries"}}
+
+<h1> Hello you!</h1>
+
+<ul>
+  {{#each @model as |country|}}
+    <li>{{ country.name }}</li>
+  {{/each}}
+</ul>
+
+
+{{outlet}}
