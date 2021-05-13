@@ -1,0 +1,13 @@
+
+
+<form action="" id={{@label}}>
+  <label for={{@label}}> Choose a {{@label}} : </label>
+
+  <select id={{@label}} form={{@label}} {{on "change" this.selectValue}}>
+    <option value= ""> --Please Choose an option-- </option>
+    {{#each @model as |model_item|}}
+      <option value= {{model_item.id }}> {{model_item.name}} </option>
+    {{/each}}
+  </select>
+  <Button @action_name={{@button_name}} form={{@label}}/>
+</form>
