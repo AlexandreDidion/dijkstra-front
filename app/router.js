@@ -7,5 +7,6 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('countries');
+  this.route('countries', { path: '/' });
+  this.route('country', { path: '/countries/:country_id' });
 });

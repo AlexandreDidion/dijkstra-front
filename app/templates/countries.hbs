@@ -8,7 +8,7 @@
   {{/each}}
 </ul>
 
-<DropDown @label='country' @model={{@model}} @button_name='Confirm' />
+<DropDown @label="country" @method="get" @model={{@model}} @button_name="Confirm" @pathTo="country"/>
 
 
 {{outlet}}
