@@ -1,13 +1,10 @@
+<label for={{this.selectId}}> {{@label_text}} : </label>
 
+<select id={{this.selectId}} form={{@form_id}} name={{@select_name}} {{on "change" @onSelectValue}}>
 
-<form action={{this.urlPath}} method={{@method}} id={{@label}}>
-  <label for={{@label}}> Choose a {{@label}} : </label>
+  <option value= ""> --Please Choose an option-- </option>
+  {{#each @model as |model_item|}}
+    <option value= {{model_item.id }} required="true" > {{model_item.name}} </option>
+  {{/each}}
 
-  <select id={{@label}} form={{@label}} {{on "change" this.selectValue}}>
-    <option value= ""> --Please Choose an option-- </option>
-    {{#each @model as |model_item|}}
-      <option value= {{model_item.id }}> {{model_item.name}} </option>
-    {{/each}}
-  </select>
-  <Button @action_name={{@button_name}} form={{@label}}/>
-</form>
+</select>

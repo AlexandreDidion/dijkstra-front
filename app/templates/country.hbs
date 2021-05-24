@@ -5,3 +5,16 @@
 {{#each @model.cities as |city|}}
     <h3>{{city.name}}</h3>
 {{/each}}
+
+
+<DropDown 
+  @id="city_start_id" 
+  @label="city of departure" 
+  @model={{@model.cities}} 
+/>
+and 
+<DropDown 
+  @id="city_end_id" 
+  @label="city of arrival" 
+  @model={{@model.cities}} 
+/>

@@ -8,7 +8,14 @@
   {{/each}}
 </ul>
 
-<DropDown @label="country" @method="get" @model={{@model}} @button_name="Confirm" @pathTo="country"/>
-
+<Form @action="" @method="get" @button_name="Choose" @id="form-country" >
+  <DropDown
+  @label_text="Please select a country:"
+  @select_name="country_id"
+  @model={{@model}}
+  @form_id="form-country"
+  @onSelectValue={{}}
+  />
+</Form>
 
 {{outlet}}
