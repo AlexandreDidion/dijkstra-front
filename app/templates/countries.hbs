@@ -2,20 +2,13 @@
 
 <h1> Hello you!</h1>
 
-<ul>
-  {{#each @model as |country|}}
-    <li>{{ country.name }}</li>
-  {{/each}}
-</ul>
-
-<Form @action="" @method="get" @button_name="Choose" @id="form-country" >
-  <DropDown
-  @label_text="Please select a country:"
-  @select_name="country_id"
-  @model={{@model}}
-  @form_id="form-country"
-  @onSelectValue={{}}
-  />
+<Form @action={{this.urlCountry}} @method="get" @button_name="Choose" @id="select-country">
+  <PowerSelect
+    @options={{this.countries}}
+    @selected={{this.country}}
+    @onChange={{fn (mut this.country)}} as |country|>
+      {{country.name}}
+  </PowerSelect>
 </Form>
 
 {{outlet}}
