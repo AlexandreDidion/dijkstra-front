@@ -5,8 +5,8 @@ import { tracked } from '@glimmer/tracking';
 export default class CountriesController extends Controller {
   @service router;
 
-  @tracked city_start = '';
-  @tracked city_end = '';
+  @tracked city_start = this.cities.firstObject;
+  @tracked city_end = this.cities.lastObject;
 
   get cities() {
     return this.country.cities;
