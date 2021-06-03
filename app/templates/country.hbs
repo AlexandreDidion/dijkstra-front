@@ -1,7 +1,19 @@
-{{page-title @model.name}}
+{{page-title this.country.name}}
 
-<h1> Welcome in {{@model.name}}</h1>
+<h1> Welcome in {{this.country.name}}</h1>
 
-{{#each @model.cities as |city|}}
-    <h3>{{city.name}}</h3>
-{{/each}}
+<Form @action={{this.urlDijkstra}} @method="get" @button_name="Search" @id="select-path"> 
+    <PowerSelect 
+        @options={{this.cities}}
+        @selected={{this.city_start}}
+        @onChange={{fn (mut this.city_start)}} as |city|>
+            {{city.name}}
+    </PowerSelect>
+
+    <PowerSelect 
+        @options={{this.cities}}
+        @selected={{this.city_end}}
+        @onChange={{fn (mut this.city_end)}} as |city|>
+            {{city.name}}
+    </PowerSelect>
+</Form>
