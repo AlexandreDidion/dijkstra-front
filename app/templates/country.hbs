@@ -2,7 +2,7 @@
 
 <h1> Welcome in {{this.country.name}}</h1>
 
-<Form @action={{this.urlDijkstra}} @method="get" @button_name="Search" @id="select-path"> 
+<Form @id="select-path"> 
     <PowerSelect 
         @options={{this.cities}}
         @selected={{this.city_start}}
@@ -16,4 +16,5 @@
         @onChange={{fn (mut this.city_end)}} as |city|>
             {{city.name}}
     </PowerSelect>
+    <Button @action_name="Search" @id="select-path" {{on "click" this.goToDijkstra}}/>
 </Form>

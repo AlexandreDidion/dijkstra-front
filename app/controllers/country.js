@@ -1,10 +1,7 @@
 import Controller from '@ember/controller';
-import { inject as service } from '@ember/service';
+import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
-
 export default class CountriesController extends Controller {
-  @service router;
-
   @tracked city_start = this.cities.firstObject;
   @tracked city_end = this.cities.lastObject;
 
@@ -12,7 +9,13 @@ export default class CountriesController extends Controller {
     return this.country.cities;
   }
 
-  get urlDijkstra() {
-    return this.router.urlFor('dijkstra');
+  @action
+  goToDijkstra() {
+    this.transitionToRoute('dijkstra', {
+      queryParams: {
+        city_start_id: this.city_start.id,
+        city_end_id: this.city_end.id,
+      },
+    });
   }
 }

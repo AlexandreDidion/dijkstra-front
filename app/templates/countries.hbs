@@ -2,13 +2,14 @@
 
 <h1> Hello you!</h1>
 
-<Form @action={{this.urlCountry}} @method="get" @button_name="Choose" @id="select-country">
+<Form @id="select-country">
   <PowerSelect
     @options={{this.countries}}
     @selected={{this.country}}
     @onChange={{fn (mut this.country)}} as |country|>
       {{country.name}}
   </PowerSelect>
+  <Button @action_name="Choose" @id="select-country" {{on "click" this.goToCountry}}/>
 </Form>
 
 {{outlet}}
