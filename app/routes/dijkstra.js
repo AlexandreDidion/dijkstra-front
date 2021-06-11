@@ -14,7 +14,6 @@ export default class DijkstraRoute extends Route {
   };
 
   model(params) {
-    debugger
     this.store.createRecord('dijkstra', { 
       cityStartId: params.cityStartId,
       cityEndId: params.cityEndId
