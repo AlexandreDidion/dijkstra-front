@@ -5,15 +5,15 @@
 <Form @id="select-path"> 
     <PowerSelect 
         @options={{this.cities}}
-        @selected={{this.city_start}}
-        @onChange={{fn (mut this.city_start)}} as |city|>
+        @selected={{this.cityStart}}
+        @onChange={{fn (mut this.cityStart)}} as |city|>
             {{city.name}}
     </PowerSelect>
 
     <PowerSelect 
         @options={{this.cities}}
-        @selected={{this.city_end}}
-        @onChange={{fn (mut this.city_end)}} as |city|>
+        @selected={{this.cityEnd}}
+        @onChange={{fn (mut this.cityEnd)}} as |city|>
             {{city.name}}
     </PowerSelect>
     <Button @action_name="Search" @id="select-path" {{on "click" this.goToDijkstra}}/>

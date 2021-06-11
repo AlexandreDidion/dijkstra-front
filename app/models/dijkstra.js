@@ -1,6 +1,8 @@
 import Model, { attr } from '@ember-data/model';
 
-export default class DijkstraPathModel extends Model {
+export default class DijkstraModel extends Model {
   @attr('string') journey;
-  @attr('number') distance_km;
+  @attr('number') distanceKm;
+  @attr('number') cityStartId;
+  @attr('number') cityEndId;
 }

@@ -1,22 +1,23 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
-export default class DijkstraPathRoute extends Route {
+export default class DijkstraRoute extends Route {
   @service store;
 
   queryParams = {
-    city_start_id: {
+    cityStartId: {
       refreshModel: true,
     },
-    city_end_id: {
+    cityEndId: {
       refreshModel: true,
     },
   };
 
   model(params) {
-    this.store.createRecord('dijkstra', {
-      city_start_id: params.city_start_id,
-      city_end_id: params.city_end_id,
+    debugger
+    this.store.createRecord('dijkstra', { 
+      cityStartId: params.cityStartId,
+      cityEndId: params.cityEndId
     })
       .save();
   }
@@ -24,8 +25,8 @@ export default class DijkstraPathRoute extends Route {
   resetController(controller, isExiting) {
     if (isExiting) {
       // isExiting would be false if only the route's model was changing
-      controller.set('city_start_id', null);
-      controller.set('city_end_id', null);
+      controller.set('cityStartId', null);
+      controller.set('cityEndId', null);
     }
   }
 }

@@ -1,10 +1,9 @@
 import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 
-export default class DijkstraPathController extends Controller {
-  queryParams = ['city_start_id', 'city_end_id'];
+export default class DijkstraController extends Controller {
+  queryParams = ['cityStartId', 'cityEndId'];
 
-  @tracked city_start_id = null;
-  @tracked city_end_id = null;
-
+  @tracked cityStartId = null;
+  @tracked cityEndId = null;
 }
