@@ -14,11 +14,15 @@ export default class DijkstraRoute extends Route {
   };
 
   model(params) {
-    this.store.createRecord('dijkstra', { 
-      cityStartId: params.cityStartId,
-      cityEndId: params.cityEndId
-    })
-      .save();
+    return params;
+  }
+
+  setupController(controller, model) {
+    super.setupController(controller, model);
+    controller.dijkstra = this.store.createRecord('dijkstra', { 
+      cityStartId: model.cityStartId,
+      cityEndId: model.cityEndId
+    }).save();
   }
 
   resetController(controller, isExiting) {
