@@ -1,5 +1,10 @@
 <h1>Your Path</h1>
 
-{{this.dijkstra.journey.firstObject}}
+<ul>
+  {{#each this.dijkstra.journey as |city|}}
+    <li>{{city}}</li>
+  {{/each}}
+</ul>
 
-{{this.dijkstra.distance}}
+
+<p> You'll have to do {{this.dijkstra.distance}} km.</p>
