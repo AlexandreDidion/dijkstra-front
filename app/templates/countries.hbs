@@ -1,15 +1,19 @@
 {{page-title "Countries"}}
 
-<h1> Hello you!</h1>
+<div class="grid__item grid__item__main">
 
-<Form @id="select-country">
-  <PowerSelect
-    @options={{this.countries}}
-    @selected={{this.country}}
-    @onChange={{fn (mut this.country)}} as |country|>
-      {{country.name}}
-  </PowerSelect>
-  <Button @action_name="Choose" @id="select-country" {{on "click" this.goToCountry}}/>
-</Form>
+  <h1> Hello you!</h1>
 
-{{outlet}}
+  <Form @id="select-country">
+    <PowerSelect
+      @options={{this.countries}}
+      @selected={{this.country}}
+      @onChange={{fn (mut this.country)}} as |country|>
+        {{country.name}}
+    </PowerSelect>
+    <Button @action_name="Choose" @id="select-country" {{on "click" this.goToCountry}}/>
+  </Form>
+
+  {{outlet}}
+
+</div>

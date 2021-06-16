@@ -2,8 +2,14 @@
 
 @import 'settings/s.typography';
 @import 'settings/s.colors';
+@import 'settings/s.grid';
+
+// OBJECTS
+
+@import 'objects/o.grid';
 
 // ELEMENTS 
+
 @import 'elements/e.body';
 
 // ADDON 

@@ -1,20 +1,25 @@
 {{page-title this.country.name}}
 
-<h1> Welcome in {{this.country.name}}</h1>
+<div class="grid__item grid__item__main">
+    
+    <h1> Welcome in {{this.country.name}}</h1>
 
-<Form @id="select-path"> 
-    <PowerSelect 
-        @options={{this.cities}}
-        @selected={{this.cityStart}}
-        @onChange={{fn (mut this.cityStart)}} as |city|>
-            {{city.name}}
-    </PowerSelect>
+    <Form @id="select-path"> 
+        <PowerSelect 
+            @options={{this.cities}}
+            @selected={{this.cityStart}}
+            @onChange={{fn (mut this.cityStart)}} as |city|>
+                {{city.name}}
+        </PowerSelect>
 
-    <PowerSelect 
-        @options={{this.cities}}
-        @selected={{this.cityEnd}}
-        @onChange={{fn (mut this.cityEnd)}} as |city|>
-            {{city.name}}
-    </PowerSelect>
-    <Button @action_name="Search" @id="select-path" {{on "click" this.goToDijkstra}}/>
-</Form>
+        <PowerSelect 
+            @options={{this.cities}}
+            @selected={{this.cityEnd}}
+            @onChange={{fn (mut this.cityEnd)}} as |city|>
+                {{city.name}}
+        </PowerSelect>
+        <Button @action_name="Search" @id="select-path" {{on "click" this.goToDijkstra}}/>
+    </Form>
+
+</div>
+

@@ -1,12 +1,15 @@
 {{page-title "Journey"}}
 
-<h1>Your Path</h1>
+<div class="grid__item grid__item__main">
+  <h1>Your Path</h1>
 
-<ul>
-  {{#each this.dijkstra.journey as |city|}}
-    <li>{{city}}</li>
-  {{/each}}
-</ul>
+  <ul>
+    {{#each this.dijkstra.journey as |city|}}
+      <li>{{city}}</li>
+    {{/each}}
+  </ul>
 
 
-<p> You'll have to do {{this.dijkstra.distance}} km.</p>
+  <p> You'll have to do {{this.dijkstra.distance}} km.</p>
+</div>
+

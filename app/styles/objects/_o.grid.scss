@@ -1,0 +1,26 @@
+// MAIN GRID 
+
+.grid__container {
+  display: grid;
+  grid-template-columns: $grid-columns-main;
+  grid-template-rows: $grid-rows-main;
+  grid-template-areas: $grid-areas-main;
+  width: 100vw;
+  height: 100vh;
+}
+
+.grid__item {
+  justify-self: center;
+}
+
+.grid__item__header {
+  grid-area: $grid-header-main;
+}
+
+.grid__item__footer {
+  grid-area: $grid-footer-main;
+}
+
+.grid__item__main {
+  grid-area: $grid-main-main;
+}
