@@ -5,5 +5,7 @@ export default class CountryRoute extends Route {
     super.setupController(controller, model);
 
     controller.country = model;
+    controller.set('cityStart', controller.country.cities.firstObject);
+    controller.set('cityEnd', controller.country.cities.lastObject);
   }
 }

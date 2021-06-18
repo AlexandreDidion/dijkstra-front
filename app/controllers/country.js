@@ -2,8 +2,8 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 export default class CountryController extends Controller {
-  @tracked cityStart = this.cities.firstObject;
-  @tracked cityEnd = this.cities.lastObject;
+  @tracked cityStart;
+  @tracked cityEnd;
 
   get cities() {
     return this.country.cities;
