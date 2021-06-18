@@ -13,13 +13,17 @@
 
 @import 'elements/e.body';
 @import 'elements/e.headings';
-@import 'elements/e.button';
 @import 'elements/e.lists';
+
+//COMPONENTS 
+@import 'components/c.button';
+@import 'components/c.footer';
 
 // UTILITIES 
 
 @import 'utilities/u.spacings';
 @import 'utilities/u.typography';
+@import 'utilities/u.colors';
 
 // ADDON 
 
