@@ -24,4 +24,7 @@
 
 .grid__item__main {
   grid-area: $grid-main-main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

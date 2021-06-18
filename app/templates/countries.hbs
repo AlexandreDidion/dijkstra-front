@@ -11,7 +11,7 @@
       @onChange={{fn (mut this.country)}} as |country|>
         {{country.name}}
     </PowerSelect>
-    <Button @action_name="Choose" @id="select-country" {{on "click" this.goToCountry}}/>
+    <Button class="margin-up-small" @action_name="Choose" @id="select-country" {{on "click" this.goToCountry}}/>
   </Form>
 
   {{outlet}}

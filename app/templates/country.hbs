@@ -11,8 +11,8 @@
             @onChange={{fn (mut this.cityStart)}} as |city|>
                 {{city.name}}
         </PowerSelect>
-
-        <PowerSelect 
+        <div class="u-margin-top-s"></div>
+        <PowerSelect
             @options={{this.cities}}
             @selected={{this.cityEnd}}
             @onChange={{fn (mut this.cityEnd)}} as |city|>
