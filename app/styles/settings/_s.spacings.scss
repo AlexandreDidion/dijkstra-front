@@ -1,9 +1,11 @@
+@use 'sass:math';
+
 // SPACING
 
 $spacing-base: 1rem !default;
 
-$spacing-xs:  $spacing-base / 4 !default;
-$spacing-s:   $spacing-base / 2 !default;
+$spacing-xs:  math.div($spacing-base, 4) !default;
+$spacing-s:   math.div($spacing-base , 2) !default;
 $spacing-l:   $spacing-base * 2 !default;
 $spacing-xl:  $spacing-base * 3 !default;
 $spacing-xxl: $spacing-base * 4 !default;

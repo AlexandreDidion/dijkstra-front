@@ -1,7 +1,7 @@
 // MAIN GRID 
   //size container
 $grid-columns-main: ([col1] 0.5fr [col2] 0.5fr [col3] 3fr [col4] 0.5fr [col5] 0.5fr [col6]) !default;
-$grid-rows-main: ([row1] 0.5fr [row2] 2fr [row3] 0.5fr [row4]) !default;
+$grid-rows-main: ([row1] 0.25fr [row2] 2.5fr [row3] 0.25fr [row4]) !default;
 
   //area container
 $grid-areas-main: (
