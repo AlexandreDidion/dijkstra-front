@@ -4,10 +4,12 @@
 @import 'settings/s.colors';
 @import 'settings/s.grid';
 @import 'settings/s.spacings';
+@import 'settings/s.breakpoints';
 
 // OBJECTS
 
 @import 'objects/o.grid';
+@import 'objects/o.media_queries';
 
 // ELEMENTS 
 
