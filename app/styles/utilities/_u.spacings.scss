@@ -1,9 +1,31 @@
-// MARGINS 
+// SETTINGS 
 
-.u-margin-bottom-s {
-  margin-bottom: $spacing-s;
-}
+$spacing-map: (
+  "base": $spacing-base,
+  "xs":   $spacing-xs,
+  "s":    $spacing-s,
+  "l":    $spacing-l,
+  "xl":   $spacing-xl,
+  "xxl":  $spacing-xxl,
+  "none": 0
+) !default;
 
-.u-margin-top-s {
-  margin-top: $spacing-s ;
+@each $size-name, $size-value in $spacing-map {
+
+  // MARGINS 
+  .u-margin-bottom-#{$size-name} {
+    margin-bottom: $size-value;
+  }
+  
+  .u-margin-top-#{$size-name} {
+    margin-top: $size-value;
+  }
+
+  .u-margin-right-#{$size-name} {
+    margin-right: $size-value;
+  }
+
+  .u-margin-left-#{$size-name} {
+    margin-left: $size-value;
+  }
 }
