@@ -20,8 +20,12 @@
             @onChange={{fn (mut this.cityEnd)}} as |city|>
                 {{city.name}}
         </PowerSelect>
-        <Button @action_name="Search" @id="select-path" {{on "click" this.goToDijkstra}}/>
+        <Button @action_name="Search" @id="select-path" {{on "click" this.onSearch}} type="button" />
     </Form>
+
+    {{#if (eq this.step "dijkstra")}}
+        {{outlet "dijkstra"}}
+    {{/if}}
 
 </div>
 

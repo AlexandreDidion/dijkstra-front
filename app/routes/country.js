@@ -8,4 +8,13 @@ export default class CountryRoute extends Route {
     controller.set('cityStart', controller.country.cities.firstObject);
     controller.set('cityEnd', controller.country.cities.lastObject);
   }
+
+  renderTemplate() {
+    this.render();
+    this.render('dijkstra', {
+      controller: 'country',
+      into: 'country',
+      outlet: 'dijkstra',
+    });
+  }
 }
