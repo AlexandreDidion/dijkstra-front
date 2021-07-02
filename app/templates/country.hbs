@@ -8,6 +8,7 @@
 
     <Form @id="select-path"> 
         <PowerSelect 
+            @matchTriggerWidth = {{false}}
             @options={{this.cities}}
             @selected={{this.cityStart}}
             @onChange={{fn (mut this.cityStart)}} as |city|>
@@ -15,6 +16,7 @@
         </PowerSelect>
         <div class="u-margin-top-s"></div>
         <PowerSelect
+            @matchTriggerWidth = {{false}}
             @options={{this.cities}}
             @selected={{this.cityEnd}}
             @onChange={{fn (mut this.cityEnd)}} as |city|>

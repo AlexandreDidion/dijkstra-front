@@ -8,6 +8,7 @@
 
   <Form @id="select-country" @label="In which country are you travelling?">
     <PowerSelect
+      @matchTriggerWidth = {{false}}
       @options={{this.countries}}
       @selected={{this.country}}
       @onChange={{fn (mut this.country)}} as |country|>
