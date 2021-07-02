@@ -12,6 +12,10 @@ export default class CountryController extends Controller {
     return this.country.cities;
   }
 
+  get remainingCities() {
+    return this.country.cities.filter((city) => !(city == this.cityStart));
+  }
+
   @action
   onSearch() {
     this.step = 'dijkstra';
