@@ -1,4 +1,4 @@
-// MAIN GRID 
+// MAIN GRID
 
 .grid__container {
   display: grid;
@@ -17,6 +17,14 @@
 
 .grid__item__header {
   grid-area: $grid-header-main;
+}
+
+.grid__item__subheader {
+  grid-area: $grid-subheader-main;
+}
+
+.grid__item__overfooter {
+  grid-area: $grid-overfooter-main;
 }
 
 .grid__item__footer {

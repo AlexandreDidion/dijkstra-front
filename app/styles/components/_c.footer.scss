@@ -1,6 +1,13 @@
 .footer {
-  background-color: $color-yellow;
+  background-color: $color-dark-red;
   display:flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer__curve {
+  position: relative;
+  width: 100%;
+  top: 2px;
+  transform: rotate(180deg);
 }
