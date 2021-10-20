@@ -1,13 +1,13 @@
 {{page-title this.country.name}}
 
 <div class="grid__item grid__item__main">
-    
-    <h1> Welcome in {{this.country.name}}</h1>
 
-    <h4>Choose your starting point and destination:</h4>
+    <h1> Welcome to {{this.country.name}}</h1>
 
-    <Form @id="select-path"> 
-        <PowerSelect 
+    <h4>What's your journey?:</h4>
+
+    <Form @id="select-path">
+        <PowerSelect
             @matchTriggerWidth = {{false}}
             @options={{this.cities}}
             @selected={{this.cityStart}}
