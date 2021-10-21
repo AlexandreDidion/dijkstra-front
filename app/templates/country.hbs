@@ -25,9 +25,9 @@
         <Button @action_name="Search" @id="select-path" {{on "click" this.onSearch}} type="button" />
     </Form>
 
-    {{#if (eq this.step "dijkstra")}}
-        {{outlet "dijkstra"}}
-    {{/if}}
+
+    {{outlet}}
+
 
 </div>
 

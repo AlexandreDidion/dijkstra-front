@@ -1,12 +1,15 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
-export default class CountryRoute extends Route {
+export default class DijkstraRoute extends Route {
+  @service store;
+
+  model(params) {
+    return this.store.peekRecord('dijkstra', params.dijkstra_id);
+  }
   setupController(controller, model) {
     super.setupController(controller, model);
-
-    controller.country = model;
-    controller.set('cityStart', controller.country.cities.firstObject);
-    controller.set('cityEnd', controller.country.cities.lastObject);
+    controller.dijkstra = model;
   }
 
   resetController(controller, isExiting, transition) {
