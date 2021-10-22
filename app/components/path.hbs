@@ -1,6 +1,6 @@
 <ul class="u-text-align-center flex">
   {{#each @cities as |city|}}
-    <li class="u-margin-right-s">{{city}}</li>
+    <li class="u-margin-right-s"><strong>{{city}}</strong></li>
     {{#unless (eq city this.endPath)}}
       <li class="u-margin-right-s"><FaIcon @icon="angle-double-right" /> </li>
     {{/unless}}
