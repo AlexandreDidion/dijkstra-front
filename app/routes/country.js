@@ -12,6 +12,7 @@ export default class CountryRoute extends Route {
   resetController(controller, isExiting, transition) {
     if (isExiting && transition.targetName !== 'error') {
       controller.set('step', 'country');
+      controller.set('dijkstra', null);
     }
   }
 }

@@ -1,32 +1,38 @@
 {{page-title this.country.name}}
 
 <div class="grid__item grid__item__main">
+  <div>
+    <h1> Welcome to {{this.country.name}}</h1>
 
-  <h1> Welcome to {{this.country.name}}</h1>
+    <h4>What's your journey?:</h4>
 
-  <h4>What's your journey?:</h4>
-
-  <Form @id="select-path">
-      <PowerSelect
-          @matchTriggerWidth = {{false}}
-          @options={{this.cities}}
-          @selected={{this.cityStart}}
-          @onChange={{fn (mut this.cityStart)}} as |city|>
-              {{city.name}}
-      </PowerSelect>
-      <div class="u-margin-top-s"></div>
-      <PowerSelect
-          @matchTriggerWidth = {{false}}
-          @options={{this.remainingCities}}
-          @selected={{this.cityEnd}}
-          @onChange={{fn (mut this.cityEnd)}} as |city|>
-              {{city.name}}
-      </PowerSelect>
-      <Button @action_name="Search" @id="select-path" {{on "click" this.onSearch}} type="button" />
-  </Form>
+    <Form @id="select-path">
+        <PowerSelect
+            @matchTriggerWidth = {{false}}
+            @options={{this.cities}}
+            @selected={{this.cityStart}}
+            @onChange={{fn (mut this.cityStart)}} as |city|>
+                {{city.name}}
+        </PowerSelect>
+        <div class="u-margin-top-s"></div>
+        <PowerSelect
+            @matchTriggerWidth = {{false}}
+            @options={{this.remainingCities}}
+            @selected={{this.cityEnd}}
+            @onChange={{fn (mut this.cityEnd)}} as |city|>
+                {{city.name}}
+        </PowerSelect>
+        <Button @action_name="Search" @id="select-path" {{on "click" this.onSearch}} type="button" />
+    </Form>
 
 
-  {{outlet}}
-  <ImgMap @dijkstra={{this.dijkstra}}/>
+    {{outlet}}
+  </div>
+
+  {{#if this.dijkstra}}
+  <div>
+    <ImgMap @dijkstra={{this.dijkstra}}/>
+  </div>
+  {{/if}}
 </div>
 
