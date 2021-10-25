@@ -1,9 +1,5 @@
-<div class="grid__item grid__item__main u-margin-top-base">
-  <h2>Your Path</h2>
+<h2 class="u-margin-top-base">Your Path</h2>
 
-  <Path @cities={{this.dijkstra.journey}} />
+<Path @cities={{this.dijkstra.journey}} />
 
-  <p> You'll have to do <strong>{{this.dijkstra.distance}}</strong> km.</p>
-</div>
-
-<img src={{this.mapUrl}} alt="Map of the quickest path for your journey"/>
+<p> You'll have to do <strong>{{this.dijkstra.distance}}</strong> km.</p>
