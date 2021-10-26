@@ -34,3 +34,7 @@
 .grid__item__main {
   grid-area: $grid-main-main;
 }
+
+.grid__item__main__border-right {
+  grid-area: $grid-main-border-right;
+}
