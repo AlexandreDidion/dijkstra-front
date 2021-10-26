@@ -7,8 +7,16 @@
   letter-spacing:1px;
   cursor: pointer;
   transition: all 0.25s ease;
-  &:hover {
-    color: $color-light-black;
+  &.grey {
+    &:hover {
+      color: $color-light-black;
+    }
+  }
+    &.red {
+    padding: $spacing-s;
+    &:hover {
+      color: $color-dark-pink;
+    }
   }
   &:active {
     letter-spacing: 2px ;
