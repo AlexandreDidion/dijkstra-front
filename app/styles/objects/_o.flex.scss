@@ -10,24 +10,24 @@
 }
 
 .flex__justify {
-  .center {
+  &.center {
     justify-content: center;
   }
-  .around {
+  &.around {
     justify-content: space-around;
   }
 
-  .between {
+  &.between {
     justify-content: space-between;
   }
 
-  .evenly {
+  &.evenly {
     justify-content: space-evenly;
   }
 }
 
 .flex__align {
-  .center-line {
+  &.center-line {
     align-items: center;
   }
 }
