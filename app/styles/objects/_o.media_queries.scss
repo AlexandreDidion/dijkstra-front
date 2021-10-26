@@ -1,7 +1,15 @@
-// Media Queries 
+// Media Queries
 
 @media (max-width: $breakpoint-mobile) {
   #home_icon {
     font-size: 2rem;
+  }
+
+  .header__curve {
+    top: -4px !important;
+  }
+
+  .footer__curve {
+    top: 4px !important;
   }
 }
