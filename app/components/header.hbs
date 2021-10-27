@@ -1,8 +1,10 @@
-<footer class="grid__item__footer">
-  <div class="footer__curve">
+<header class="grid__item__header">
+  <nav class="header">
+    <LinkTo @route="home" role="button"> <FaIcon @icon="city" @size="3x" id="home_icon" /> </LinkTo>
+  </nav>
+  <div class="header__curve">
     <svg viewBox="0 0 1440 50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <path fill="rgba(93, 0, 30, 1)" d="M 0 0 C 105.2 0 157.8 43 263 43 L 263 43 L 263 0 L 0 0 Z" stroke-width="0">
-      </path>
+      <path fill="rgba(93, 0, 30, 1)" d="M 0 0 C 105.2 0 157.8 43 263 43 L 263 43 L 263 0 L 0 0 Z" stroke-width="0"></path>
       <path fill="rgba(93, 0, 30, 1)" d="M 262 43 C 386.4 43 448.6 29 573 29 L 573 29 L 573 0 L 262 0 Z" stroke-width="0">
       </path>
       <path fill="rgba(93, 0, 30, 1)" d="M 572 29 C 715.6 29 787.4 50 931 50 L 931 50 L 931 0 L 572 0 Z" stroke-width="0">
@@ -11,9 +13,4 @@
       </path>
     </svg>
   </div>
-  <section class="footer">
-    <p class="u-color-text-light-grey"> Made with <FaIcon class="u-color-text-light-pink" @icon="heart" /> and <FaIcon class="u-color-text-light-pink" @icon="cookie-bite" />
-    by  <a target="_blank" rel="noopener noreferrer" href="https://github.com/AlexandreDidion">Alex</a>
-    </p>
-  </section>
-</footer>
+</header>

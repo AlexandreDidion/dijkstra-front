@@ -1,7 +1,7 @@
 {{page-title this.country.name}}
 
-<div class="grid__item grid__item__main flex flex__justify {{if this.dijkstra "between" "center"}}" style="width:100%;">
-  <div>
+<main class="grid__item grid__item__main flex flex__justify {{if this.dijkstra "between" "center"}}" style="width:100%;">
+  <section>
     <h1> Welcome to {{this.country.name}}</h1>
 
     <h4>What's your journey?:</h4>
@@ -27,12 +27,12 @@
 
 
     {{outlet}}
-  </div>
+  </section>
 
   {{#if this.dijkstra}}
-  <div>
+  <aside>
     <ImgMap @dijkstra={{this.dijkstra}}/>
-  </div>
+  </aside>
   {{/if}}
-</div>
+</main>
 

@@ -1,21 +1,17 @@
 // MAIN GRID
   //size container
 $grid-columns-main: ([col1] 0.5fr [col2] 0.5fr [col3] 3fr [col4] 0.5fr [col5] 0.5fr [col6]) !default;
-$grid-rows-main: ([row1] 0.25fr [row2] 0.175fr [row3] 2.5fr [row4] 0.175fr [row5] 0.25fr [row6]) !default;
+$grid-rows-main: ([row1] 0.25fr [row2] 2.5fr [row3] 0.25fr [row4]) !default;
 
   //area container
 $grid-areas-main: (
                     "head head head head head"
-                    "subhead subhead subhead subhead subhead"
                     "border-left border-left main border-right border-right"
-                    "overfoot overfoot overfoot overfoot overfoot"
                     "foot foot foot foot foot"
                   ) !default;
 
   //area items
 $grid-header-main: head !default;
-$grid-subheader-main: subhead !default;
 $grid-main-main: main !default;
 $grid-main-border-right: border-right !default;
-$grid-overfooter-main: overfoot !default;
 $grid-footer-main: foot !default;
