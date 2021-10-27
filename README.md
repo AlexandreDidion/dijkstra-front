@@ -6,7 +6,7 @@ It uses a [Rails API](https://github.com/AlexandreDidion/dijkstra-exercise) (tha
 
 
 Ressources I used:
-Icons from [Fontawesome](https://fontawesome.com/)
-Illustration for Meta Tag: [Undraw](https://undraw.co/illustrations)
-Meta tag from this [website](https://metatags.io/)
+Icons from [Fontawesome](https://fontawesome.com/)\
+Illustration for Meta Tag: [Undraw](https://undraw.co/illustrations)\
+Meta tag from this [website](https://metatags.io/)\
 
