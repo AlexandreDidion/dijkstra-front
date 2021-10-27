@@ -3,6 +3,8 @@
 module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'dijkstra-front',
+    BASIC_SECRET: process.env.BASIC_SECRET,
+    MAPBOX_API_KEY: process.env.MAPBOX_API_KEY,
     environment,
     rootURL: '/',
     locationType: 'auto',
