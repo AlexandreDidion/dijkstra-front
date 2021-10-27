@@ -1,4 +1,4 @@
-// SETTINGS 
+// SETTINGS
 
 $spacing-map: (
   "base": $spacing-base,
@@ -12,11 +12,11 @@ $spacing-map: (
 
 @each $size-name, $size-value in $spacing-map {
 
-  // MARGINS 
+  // MARGINS
   .u-margin-bottom-#{$size-name} {
     margin-bottom: $size-value;
   }
-  
+
   .u-margin-top-#{$size-name} {
     margin-top: $size-value;
   }
@@ -27,5 +27,25 @@ $spacing-map: (
 
   .u-margin-left-#{$size-name} {
     margin-left: $size-value;
+  }
+}
+
+@each $size-name, $size-value in $spacing-map {
+
+  // MARGINS
+  .u-padding-bottom-#{$size-name} {
+    padding-bottom: $size-value;
+  }
+
+  .u-padding-top-#{$size-name} {
+    padding-top: $size-value;
+  }
+
+  .u-padding-right-#{$size-name} {
+    padding-right: $size-value;
+  }
+
+  .u-padding-left-#{$size-name} {
+    padding-left: $size-value;
   }
 }
