@@ -9,4 +9,5 @@ Ressources I used:
 Icons from [Fontawesome](https://fontawesome.com/)\
 Illustration for Meta Tag: [Undraw](https://undraw.co/illustrations)\
 Meta tag from this [website](https://metatags.io/)
+[Mapbox](https://www.mapbox.com/) for the map API
 
